@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+```
+<!-- Navbar -->
+<header class="navbar">
+    <h1 class="logo">NETFLIX</h1>
+    <button class="open-btn" onclick="openModal()">
+    Login
+  </button>
+</header>
+
+<!-- Modal -->
+<div class="modal" id="loginModal">
+    
+  <div class="modal-content">
+      
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <h2>Login Form</h2>
+
+    <form>
+        <div class="input-box">
+          <input type="email" placeholder="Enter Email" required>
+        </div>
+
+        <div class="input-box">
+          <input type="password" placeholder="Enter Password" required>
+        </div>
+
+        <button type="submit" class="login-btn">
+          Login
+        </button>
+
+        <div class="extra">Don't have an account?
+          <a href="#">Register</a>
+        </div>
+    </form>
+
+  </div>
+</div>
+
+<!-- Banner Section -->
+<section class="banner">
+
+    <!-- Background Video -->
+    <video class="banner-video" controls>
+        <source src="videoplayback (1).mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+    <!-- Banner Content -->
+    <div class="banner-content">
+        <h1>alice in borderland</h1>
+        <p>Arisu and his friends are trapped in a dangerous world where they must compete in deadly survival games to stay alive.</p>
+
+        <button class="play-btn">▶ Play</button>
+        <button class="info-btn">More Info</button>
+    </div>
+
+</section>
+
+<!-- Trending Row -->
+<section class="row">
+    <h2>Trending Now</h2>
+    <div class="row-posters" id="trending">
+        <img src="All of Us Are Dead _ Original Release for Netflix.jpg">
+        <img src="Demon slayer - la forteresse infinie.jpg">
+        <img src="Squid game.jpg">
+        <img src="Devara P1.jpg">
+        <img src="John Wick.jpg">
+        <img src="Alive (2020).jpg">
+        <img src="TOKYO REVENGERS SEASON 3.jpg">
+        <img src="The Great Flood.jpg">
+        <img src="Venom_ Let There Be Carnage (2021).jpg">
+    </div>
+</section>
+
+<!-- Popular Row -->
+<section class="row">
+    <h2>South India on Netflix</h2>
+    <div class="row-posters" id="popular">
+        <img src="The GOAT.jpg">
+        <img src="Leo.jpg">
+        <img src="Devara P1.jpg">
+        <img src="The Salaar Prabhas Tattoo_ A Tribute to the Icon, Meaning & Impact Of Salaar Tattoo.jpg">
+        <img src="download (6).jpg">
+        <img src="Maharaja 2024 Movie.jpg">
+        <img src="Thalapathy VIJAY in BEAST Movie.jpg">
+        <img src="Dragon — Netflix.jpg">
+    </div>
+</section>
+
+<!-- Top Rated Row -->
+<section class="row">
+    <h2>Kdrama</h2>
+    <div class="row-posters" id="toprated">
+        <img src="All of Us Are Dead _ Original Release for Netflix.jpg">
+        <img src="Squid game.jpg">
+        <img src="download (10).jpg">
+        <img src="download (11).jpg">
+        <img src="Spring fever.jpg">
+        <img src="MyDemon.jpg">
+        <img src="goblin.jpg">
+        <img src="Bloodhounds.jpg">
+    </div>
+</section>
+
+<section class="row">
+    <h2>Hollywood</h2>
+    <div class="row-posters" id="toprated">
+        <img src="Damsel Poster.jpg">
+        <img src="John Wick.jpg">
+        <img src="Stranger Things - Poster.jpg">
+        <img src="download (12).jpg">
+        <img src="Onepiece.jpg">
+        <img src="Blue Beetle - 2023.jpg">
+        <img src="Enola Holmes.jpg">
+        <img src="The Witcher.jpg">
+    </div>
+</section>
+
+<section class="row">
+    <h2>Anime</h2>
+    <div class="row-posters" id="toprated">
+        <img src="Chainsaw Man.jpg">
+        <img src="Naruto Shippuden.jpg">
+        <img src="jujustu kaisen.jpg">
+        <img src="Sakamoto Days Anime Trailer & Release Date_ All___.jpg">
+        <img src="Bluelock.jpg">
+        <img src="DEVIL MAY CRY.jpg">
+        <img src="death note.jpg">
+        <img src="Wind Breaker.jpg">
+    </div>
+</section>
+
+<script>const modal = document.getElementById("loginModal");
+
+    function openModal(){
+      modal.style.display = "flex";
+    }
+
+    function closeModal(){
+      modal.style.display = "none";
+    }
+
+    // Close when clicking outside
+    window.onclick = function(event){
+      if(event.target == modal){
+        modal.style.display = "none";
+      }
+    }
+
+    const video = document.querySelector(".banner-video");
+const playBtn = document.querySelector(".play-btn");
+
+playBtn.addEventListener("click", () => {
+
+    // Play Video
+    video.play();
+
+    // Unmute Sound
+    video.muted = false;
+
+});
+    </script>
+
+
+</body>
+</html>
